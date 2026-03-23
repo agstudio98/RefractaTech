@@ -6,7 +6,7 @@ import * as THREE from 'three';
 function FloatingShape({ position, rotation, scale, color, geometryType = 'box' }: any) {
   const meshRef = useRef<THREE.Mesh>(null);
 
-  useFrame((state) => {
+  useFrame((_state) => {
     if (meshRef.current) {
       meshRef.current.rotation.x += 0.002;
       meshRef.current.rotation.y += 0.003;
