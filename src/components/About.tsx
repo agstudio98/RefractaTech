@@ -1,13 +1,13 @@
 export function About() {
   return (
     <div className="container">
-      <div className="glass-card fade-in" style={{ padding: '3rem', maxWidth: '800px', margin: '0 auto' }}>
+      <div className="glass-card fade-in section-card">
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <h2>Contáctanos</h2>
           <p>¿Tienes alguna consulta o quieres realizar un pedido? Estamos aquí para ayudarte.</p>
         </div>
 
-        <div className="grid-cols-2" style={{ gap: '3rem', alignItems: 'start' }}>
+        <div className="about-grid">
           <div>
             <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>Información</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>

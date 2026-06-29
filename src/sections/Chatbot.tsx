@@ -25,14 +25,7 @@ export default function Chatbot() {
 
   return (
     <div className="container">
-      <div className="glass-card fade-in" style={{ 
-        maxWidth: '500px', 
-        margin: '0 auto', 
-        height: '600px', 
-        display: 'flex', 
-        flexDirection: 'column',
-        overflow: 'hidden'
-      }}>
+      <div className="glass-card fade-in chatbot-card">
         <div style={{ 
           padding: '1.5rem', 
           background: 'var(--text)', 

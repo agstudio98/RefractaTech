@@ -18,49 +18,32 @@ export function Carrousel() {
 
   return (
     <div className="container">
-      <div className="glass-card" style={{ 
-        position: 'relative', 
-        height: '450px', 
-        overflow: 'hidden',
-        borderRadius: '32px',
-        padding: 0
-      }}>
+      <div className="glass-card carousel-card">
         {slides.map((s, i) => (
-          <div key={i} style={{ 
-            position: 'absolute', 
-            inset: 0, 
-            opacity: i === current ? 1 : 0, 
-            transition: 'opacity 1s ease-in-out',
-            zIndex: i === current ? 1 : 0
-          }}>
-            <img src={s.img} alt={s.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            <div style={{ 
-              position: 'absolute', 
-              inset: 0, 
-              background: 'linear-gradient(90deg, rgba(0,0,0,0.8) 0%, transparent 60%)',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              padding: '0 4rem'
-            }}>
-              <h2 style={{ color: 'white', fontSize: '3rem', marginBottom: '0.5rem' }}>{s.title}</h2>
-              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.25rem' }}>{s.subtitle}</p>
+          <div 
+            key={i} 
+            className="carousel-slide"
+            style={{ 
+              opacity: i === current ? 1 : 0, 
+              zIndex: i === current ? 1 : 0
+            }}
+          >
+            <img src={s.img} alt={s.title} className="carousel-img" />
+            <div className="carousel-overlay">
+              <h2 className="carousel-title">{s.title}</h2>
+              <p className="carousel-subtitle">{s.subtitle}</p>
             </div>
           </div>
         ))}
         
-        <div style={{ position: 'absolute', bottom: '1.5rem', left: '4rem', zIndex: 2, display: 'flex', gap: '0.5rem' }}>
+        <div className="carousel-indicators">
           {slides.map((_, i) => (
             <div 
               key={i} 
               onClick={() => setCurrent(i)}
+              className="carousel-dot"
               style={{ 
-                width: i === current ? '30px' : '10px', 
-                height: '10px', 
-                background: 'white', 
-                borderRadius: '10px', 
-                cursor: 'pointer',
-                transition: 'width 0.3s'
+                width: i === current ? '30px' : '10px'
               }} 
             />
           ))}

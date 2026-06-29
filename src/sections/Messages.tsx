@@ -1,7 +1,7 @@
 export default function Messages() {
   return (
     <div className="container">
-      <div className="glass-card fade-in" style={{ padding: '3rem', maxWidth: '800px', margin: '0 auto' }}>
+      <div className="glass-card fade-in section-card">
         <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
           <h2 style={{ fontSize: '2.5rem' }}>Contáctanos</h2>
           <p>Envíanos tu consulta y te responderemos a la brevedad.</p>
